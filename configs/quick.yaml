@@ -1,0 +1,35 @@
+# Configuración rápida para pruebas y CI (~15 s). No usar para reportar resultados.
+seed: 42
+n_replications: 3
+data:
+  network: alarm
+  n_samples: 1000
+  treatment: CO
+  outcome: BP
+score:
+  penalty: 3.5
+  ridge: 1.0e-6
+ga:
+  population_size: 10
+  n_generations: 8
+  max_indegree: 3
+  p_crossover: 0.90
+  p_mutation: 0.30
+  tournament_size: 3
+  elitism: 1
+  early_stopping_patience: null
+dml:
+  n_splits: 2
+  n_estimators: 25
+  max_depth: 5
+  min_samples_leaf: 1
+  n_jobs: 1            # 1 = determinismo bit a bit y menor sobrecarga de hilos
+baselines:
+  run_hill_climbing: false
+  run_pc: true
+  run_random_order: true
+  pc_alpha: 0.01
+  pc_max_cond_set: 2
+  hc_max_iter: 50
+output_dir: results
+figures_dir: figures

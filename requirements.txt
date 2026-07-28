@@ -1,0 +1,10 @@
+# Versiones exactas con las que se produjeron los resultados reportados.
+# Reproducen las cifras del artículo y del proyecto de tesis (ver docs/REPRODUCIBILITY.md).
+numpy==2.2.6
+pandas==2.3.3
+networkx==3.4.2
+scikit-learn==1.7.2
+scipy==1.15.3
+matplotlib==3.10.9
+pgmpy==1.1.2
+PyYAML==6.0.3

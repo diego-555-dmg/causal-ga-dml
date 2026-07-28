@@ -1,0 +1,10 @@
+Componente,Parámetro,Valor
+Datos,Red / observaciones,alarm / 5000
+Datos,Tratamiento / resultado,CO / BP
+Score,Penalización BIC / regularización,3.5 / 1e-06
+AG,Población / generaciones,40 / 60
+AG,Grado de entrada máximo,4
+AG,p. cruce / p. mutación,0.9 / 0.3
+AG,Torneo / elitismo,3 / 2
+Double ML,Particiones / árboles / profundidad,2 / 100 / 6
+Diseño,Réplicas / semilla maestra,30 / 42

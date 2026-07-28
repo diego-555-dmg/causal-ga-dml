@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "causal-ga-dml"
+version = "1.0.0"
+description = "Descubrimiento causal automatizado con algoritmos genéticos y estimación con Double Machine Learning"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Diego Alonso Córdova Ayala", email = "diego.cordova@dmg-pe.com" }]
+keywords = ["causal discovery", "genetic algorithm", "double machine learning",
+            "bayesian networks", "structural causal model"]
+classifiers = [
+  "Programming Language :: Python :: 3.10",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "numpy>=2.2", "pandas>=2.3", "networkx>=3.4", "scikit-learn>=1.7",
+  "scipy>=1.15", "matplotlib>=3.10", "pgmpy>=1.1", "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3", "pytest-cov>=6.0", "ruff>=0.8"]
+
+[project.scripts]
+causal-ga-dml = "causal_ga_dml.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+filterwarnings = ["ignore::FutureWarning", "ignore::DeprecationWarning"]
+markers = ["slow: pruebas que ejecutan el pipeline completo (varios segundos)"]
+
+[tool.ruff]
+line-length = 95
+src = ["src", "tests", "scripts"]

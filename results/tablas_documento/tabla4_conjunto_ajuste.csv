@@ -1,0 +1,5 @@
+Método,Cobertura de confusores,Contaminación por descendientes,|Sesgo| vs. oráculo
+Algoritmo genético,"1,000","0,0 %","0,0020"
+Hill-Climbing (BIC),"0,700","6,7 %","0,0123"
+PC (Fisher-z),"0,650","23,3 %","0,0257"
+Orden aleatorio (ablación),"0,567","46,7 %","0,0173"

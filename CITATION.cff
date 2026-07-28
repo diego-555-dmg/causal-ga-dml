@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Si utiliza este software, por favor cítelo como se indica a continuación."
+title: "causal-ga-dml: descubrimiento causal automatizado con algoritmos genéticos y Double Machine Learning"
+version: 1.0.0
+date-released: 2026-07-25
+license: MIT
+authors:
+  - family-names: "Córdova Ayala"
+    given-names: "Diego Alonso"
+    email: diego.cordova@dmg-pe.com
+    affiliation: "Universidad Nacional de Ingeniería, Lima, Perú"
+keywords:
+  - descubrimiento causal
+  - algoritmos genéticos
+  - Double Machine Learning
+  - redes bayesianas
+  - modelado causal estructural
+abstract: >-
+  Implementación reproducible de la sinergia entre un algoritmo genético
+  basado en ordenamientos para el descubrimiento automatizado de la estructura
+  causal (DAG) y el Double Machine Learning para la estimación insesgada de
+  efectos causales, validada sobre la red bayesiana de referencia ALARM.

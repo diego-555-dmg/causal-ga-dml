@@ -1,0 +1,42 @@
+# Configuración de referencia: una corrida con la semilla 42.
+# Reproduce el prototipo original del entregable E3.
+seed: 42
+n_replications: 1
+
+data:
+  network: alarm          # red bayesiana de referencia (37 nodos, 46 aristas)
+  n_samples: 5000         # observaciones simuladas
+  treatment: CO           # gasto cardíaco
+  outcome: BP             # presión arterial
+
+score:
+  penalty: 3.5            # factor de penalización de complejidad del BIC
+  ridge: 1.0e-6           # regularización de la matriz de covarianza
+
+ga:
+  population_size: 40
+  n_generations: 60
+  max_indegree: 4
+  p_crossover: 0.90
+  p_mutation: 0.30
+  tournament_size: 3
+  elitism: 2
+  early_stopping_patience: null
+
+dml:
+  n_splits: 2             # particiones del cross-fitting
+  n_estimators: 100       # árboles del bosque aleatorio
+  max_depth: 6
+  min_samples_leaf: 1
+  n_jobs: 1            # 1 = determinismo bit a bit y menor sobrecarga de hilos
+
+baselines:
+  run_hill_climbing: true
+  run_pc: true
+  run_random_order: true
+  pc_alpha: 0.01
+  pc_max_cond_set: 3
+  hc_max_iter: 200
+
+output_dir: results
+figures_dir: figures

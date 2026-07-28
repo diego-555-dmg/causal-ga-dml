@@ -1,0 +1,9 @@
+Estimación o prueba,ATE,Interpretación
+Sin ajuste alguno,"0,325 ± 0,013",Referencia sesgada
+Ajuste con el DAG verdadero (oráculo),"0,319 ± 0,023",Referencia insesgada
+Ajuste con el DAG del algoritmo genético,"0,319 ± 0,023",Coincide con el oráculo
+Ajuste con el DAG del Hill-Climbing,"0,310 ± 0,030",Sesgo moderado
+Ajuste con el DAG del PC,"0,341 ± 0,028",Sobreestimación
+Refutador: causa común aleatoria,"0,315 ± 0,023",Estable
+Refutador: tratamiento placebo,"-0,001 ± 0,012",Colapsa a cero
+Refutador: submuestra al 80 %,"0,317 ± 0,032",Estable
